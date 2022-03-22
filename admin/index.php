@@ -7,12 +7,10 @@
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/juqery_latest.js"></script>
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/bootstrap.min.js"></script>
   	<style type="text/css">
-  		#side_bar{
-  			background-color: whitesmoke;
-  			padding: 50px;
-  			width: 300px;
-  			height: 450px;
-  		}
+  		.row{
+			position: relative;
+			left: 30%;
+		}
   	</style>
 </head>
 <body>
@@ -34,26 +32,9 @@
 			</ul>
 		</div>
 	</nav><br>
-	<span><marquee>This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
-	<div class="row">
-		<div class="col-md-4" id="side_bar">
-			<h5>Library Timing</h5>
-			<ul>
-				<li>Opening Timing: 8:00 AM</li>
-				<li>Closing Timing: 8:00 PM</li>
-				<li>(Sunday off)</li>
-			</ul>
-			<h5>What we provide ?</h5>
-			<ul>
-				<li>Full furniture</li>
-				<li>Free Wi-fi</li>
-				<li>News Papers</li>
-				<li>Discussion Room</li>
-				<li>RO Water</li>
-				<li>Peacefull Environment</li>
-			</ul>
-		</div>		
-		<div class="col-md-8" id="main_content">
+	<span><marquee>5th Sem Project - Library Management System</marquee></span><br><br>
+	<div class="row">	
+		<div class="col-md-4" id="main_content">
 			<center><h3>Admin Login Form</h3></center>
 			<form action="" method="post">
 				<div class="form-group">
