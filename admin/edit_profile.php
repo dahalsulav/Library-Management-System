@@ -21,14 +21,8 @@
 	<link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1/css/bootstrap.min.css">
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/juqery_latest.js"></script>
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/bootstrap.min.js"></script>
-  	<style type="text/css">
-  		#side_bar{
-  			background-color: whitesmoke;
-  			padding: 50px;
-  			width: 300px;
-  			height: 450px;
-  		}
-  	</style>
+  	  	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="../bootstrap-4.4.1/css/styles.css" rel="stylesheet" />
 </head>
 <body>
 <?php include('adnavbar.php') ?>	

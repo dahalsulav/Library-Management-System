@@ -18,11 +18,11 @@
     <link href="bootstrap-4.4.1/css/styles.css" rel="stylesheet" />
 </head>
 
-<body id="page-top">
+<body>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top">User Dashboard</a>
+            <a class="navbar-brand" href="user_dashboard.php">User Dashboard</a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>

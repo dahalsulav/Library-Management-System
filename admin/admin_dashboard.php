@@ -2,30 +2,30 @@
 	require('functions.php');
 	session_start();
 ?>
-<!DOCTYPE html>
-<html>
+	<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title>User Dashboard</title>
-	<meta charset="utf-8" name="viewport" content="width=device-width,intial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1/css/bootstrap.min.css">
-  	<script type="text/javascript" src="../bootstrap-4.4.1/js/juqery_latest.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Library Management System</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="bootstrap-4.4.1/css/styles.css" rel="stylesheet" />
+	<script type="text/javascript" src="../bootstrap-4.4.1/js/juqery_latest.js"></script>
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/bootstrap.min.js"></script>
-  	<style type="text/css">
-		  body{
-			  cursor: pointer;
-		  }
-  		#side_bar{
-  			background-color: whitesmoke;
-  			padding: 50px;
-  			width: 300px;
-  			height: 450px;
-  		}
-		  .row{
-			  margin-left:0;
-			  margin-right: 0;
-		  }
-  	</style>
+	  	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="../bootstrap-4.4.1/css/styles.css" rel="stylesheet" />
 </head>
+
 <body>
 <?php include('adnavbar.php') ?>
 <?php include('secondnav.php') ?>
@@ -68,7 +68,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-3 mt-3">
 			<div class="card bg-light" style="width: 300px">
 				<div class="card-header">Issued Books:</div>
 				<div class="card-body">
