@@ -20,73 +20,36 @@
   	</style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="admin_dashboard.php">Library Management System(LMS)</a>
-			</div>
-			<font style="color: white"><span><strong>Welcome: <?php echo $_SESSION['name'];?></strong></span></font>
-			<font style="color: white"><span><strong>Email: <?php echo $_SESSION['email'];?></strong></span></font>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown">My Profile</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="view_profile.php">View Profile</a>
-						<a class="dropdown-item" href="edit_profile.php"> Edit Profile</a>
-						<a class="dropdown-item" href="change_password.php">Change Password</a>
-					</div>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="../logout.php">Logout</a></li>
-			</ul>
-		</div>
-	</nav>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
-	<div class="container-fluid">
-		<ul class="nav navbar-nav navbar-center">
-			<li class="nav-item">
-				<a href="admin_dashboard.php" class="nav-link">Dashboard</a>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Book</a>
-				<div class="dropdown-menu">
-					<a href="add_book.php" class="dropdown-item">Add New Book</a>
-					<a href="manage_book.php" class="dropdown-item">Manage Books</a>
-				</div>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Category</a>
-				<div class="dropdown-menu">
-					<a href="add_cat.php" class="dropdown-item">Add New Category</a>
-					<a href="" class="dropdown-item">Manage Category</a>
-				</div>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Author</a>
-				<div class="dropdown-menu">
-					<a href="add_author.php" class="dropdown-item">Add New Author</a>
-					<a href="" class="dropdown-item">Manage Authors</a>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a href="" class="nav-link">Issue Book</a>
-			</li>
-		</ul>
-	</div>
-</nav>
+<?php include('adnavbar.php') ?>
+<?php include('secondnav.php') ?>
 
-	<span><marquee>This is library Management System. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
-	<div class="row">
+
+<br>
+<div class="row">
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
 			<form action="" method="post">
 				<div class="form-group">
 					<label>Book Name:</label>
-					<input type="text" name="book_name" class="form-control" required="">
+					<select class="form-control" name="book_name" required="">
+						<option>Select Book</option>
+						<?php
+							$connection = mysqli_connect("localhost","root","");
+							$db = mysqli_select_db($connection,"lms");
+							$query = "select book_name from books";
+							$query_run = mysqli_query($connection,$query);
+							while($row = mysqli_fetch_assoc($query_run)){
+								?>
+								<option><?php echo $row['book_name'];?></option>
+								<?php
+							}
+						?>
+					</select>
 				</div>
 				<div class="form-group">
 					<label>Book Author:</label>
 					<select class="form-control" name="book_author">
-						<option>-Select author-</option>
+						<option>Select Author</option>
 						<?php
 							$connection = mysqli_connect("localhost","root","");
 							$db = mysqli_select_db($connection,"lms");
@@ -101,11 +64,38 @@
 					</select>
 				<div class="form-group">
 					<label>Book Number:</label>
-					<input type="text" name="book_no" class="form-control" required="">
+					<select class="form-control" name="book_no"  required="">
+						<option>Select Book Number</option>
+						<?php
+							$connection = mysqli_connect("localhost","root","");
+							$db = mysqli_select_db($connection,"lms");
+							$query = "select book_no from books";
+							$query_run = mysqli_query($connection,$query);
+							while($row = mysqli_fetch_assoc($query_run)){
+								?>
+								<option><?php echo $row['book_no'];?></option>
+								<?php
+							}
+						?>
+					</select>
+				<div class="form
 				</div>
 				<div class="form-group">
 					<label>Student ID:</label>
-					<input type="text" name="student_id" class="form-control" required="">
+					<select class="form-control" name="student_id"  required="">
+						<option>Select Student ID</option>
+						<?php
+							$connection = mysqli_connect("localhost","root","");
+							$db = mysqli_select_db($connection,"lms");
+							$query = "select id from users";
+							$query_run = mysqli_query($connection,$query);
+							while($row = mysqli_fetch_assoc($query_run)){
+								?>
+								<option><?php echo $row['id'];?></option>
+								<?php
+							}
+						?>
+					</select>
 				</div>
 				<div class="form-group">
 					<label>Issue Date:</label>

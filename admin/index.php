@@ -7,9 +7,14 @@
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/juqery_latest.js"></script>
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/bootstrap.min.js"></script>
   	<style type="text/css">
-  		.row{
-			position: relative;
-			left: 30%;
+  
+		.navbar-dark .navbar-brand {
+			border: 2px solid white;
+			padding: 10px;
+			border-radius: 7px;
+		}	
+		form{
+			margin: 0 30%;
 		}
   	</style>
 </head>
@@ -17,7 +22,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.php">Library Management System(LMS)</a>
+				<a class="navbar-brand" href="../index.php">Library Management System(LMS)</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item">
@@ -31,11 +36,11 @@
 				</li>
 			</ul>
 		</div>
-	</nav><br>
-	<span><marquee>5th Sem Project - Library Management System</marquee></span><br><br>
+	</nav>
+	<br/>
 	<div class="row">	
-		<div class="col-md-4" id="main_content">
-			<center><h3>Admin Login Form</h3></center>
+		<div class="col-md-12" id="main_content">
+			<center><h3>Admin Login Form</h3>
 			<form action="" method="post">
 				<div class="form-group">
 					<label for="name">Email ID:</label>
@@ -47,7 +52,7 @@
 				</div>
 				<button type="submit" name="login" class="btn btn-primary">Login</button>
 			</form>
-
+			</center>
 			<?php
 				session_start();
 				if(isset($_POST['login'])){
