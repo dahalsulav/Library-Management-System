@@ -10,10 +10,10 @@
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Category</a>
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Faculty</a>
 				<div class="dropdown-menu">
-					<a href="add_cat.php" class="dropdown-item">Add New Category</a>
-					<a href="manage_cat.php" class="dropdown-item">Manage Category</a>
+					<a href="add_cat.php" class="dropdown-item">Add New Faculty</a>
+					<a href="manage_cat.php" class="dropdown-item">Manage Faculty</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">

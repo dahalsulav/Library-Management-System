@@ -26,9 +26,9 @@
 					<tr>
 						<th>Name</th>
 						<th>Author</th>
-						<th>Category</th>
-						<th>Number</th>
-						<th>Price</th>
+						<th>Faculty</th>
+						<th>Book Number</th>
+						<th>Book Price</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -41,8 +41,8 @@
 						?>
 						<tr>
 							<td><?php echo $row['book_name'];?></td>
-							<td><?php echo $row['author_id'];?></td>
-							<td><?php echo $row['cat_id'];?></td>
+							<td><?php echo $row['author_name'];?></td>
+							<td><?php echo $row['fac_name'];?></td>
 							<td><?php echo $row['book_no'];?></td>
 							<td><?php echo $row['book_price'];?></td>
 							<td>

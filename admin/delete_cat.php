@@ -5,6 +5,6 @@
 	$query_run = mysqli_query($connection,$query);
 ?>
 <script type="text/javascript">
-	alert("category Deleted...");
+	alert("faculty Deleted...");
 	window.location.href = "manage_cat.php";
 </script>

@@ -111,5 +111,9 @@
 		$db = mysqli_select_db($connection,"lms");
 		$query = "insert into issued_books values(null,$_POST[book_no],'$_POST[book_name]','$_POST[book_author]',$_POST[student_id],1,'$_POST[issue_date]')";
 		$query_run = mysqli_query($connection,$query);
+		echo "<script type='text/javascript'>
+	alert('book issued successfully');
+	window.location.href = 'view_issued_book.php';
+</script>";
 	}
 ?>

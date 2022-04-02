@@ -7,7 +7,7 @@
 	$author = "";
 	$book_no = "";
 	$student_name = "";
-	$query = "select issued_books.book_name,issued_books.book_author,issued_books.book_no,users.name from issued_books left join users on issued_books.student_id = users.id";
+	$query = "select issued_books.status, issued_books.issue_date, issued_books.book_name,issued_books.book_author,issued_books.book_no,users.name from issued_books left join users on issued_books.student_id = users.id";
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,8 +37,8 @@
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">Category</a>
 				<div class="dropdown-menu">
-					<a href="" class="dropdown-item">Add New Category</a>
-					<a href="" class="dropdown-item">Manage Category</a>
+					<a href="" class="dropdown-item">Add New Faculty</a>
+					<a href="" class="dropdown-item">Manage Faculty</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
@@ -49,7 +49,7 @@
 				</div>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Issue Book</a>
+				<a href="issue_book.php" class="nav-link">Issue Book</a>
 			</li>
 		</ul>
 	</div>
@@ -66,20 +66,29 @@
 					<th>Author:</th>
 					<th>Number:</th>
 					<th>Student Name:</th>
+					<th>Issued Date:</th>
+					<th>Status:</th>
+
 				</tr>
 				<?php
 					$query_run = mysqli_query($connection,$query);
 					while($row = mysqli_fetch_assoc($query_run)){
+						$issue_date = $row['issue_date'];
 						$book_name = $row['book_name'];
 						$book_author = $row['book_author'];
 						$book_no = $row['book_no'];
 						$student_name = $row['name'];
+						$status = $row['status'];
+
 				?>
 						<tr>
 							<td><?php echo $book_name;?></td>
 							<td><?php echo $book_author;?></td>
 							<td><?php echo $book_no;?></td>
 							<td><?php echo $student_name;?></td>
+							<td><?php echo $issue_date;?></td>
+							<td><?php if((int)$status == 1){echo "Not Returned"; }else{echo "Returned";};?></td>
+
 						</tr>
 						<?php
 					}

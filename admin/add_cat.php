@@ -22,10 +22,10 @@
 		<div class="col-md-4">
 			<form action="" method="post">
 				<div class="form-group">
-					<label>Category Name:</label>
+					<label>Faculty Name:</label>
 					<input type="text" name="cat_name" class="form-control" required="">
 				</div>
-				<button class="btn btn-primary" name="add_cat">Add Category</button>
+				<button class="btn btn-primary" name="add_cat">Add Faculty</button>
 
 			</form>
 		</div>
@@ -40,5 +40,9 @@
 		$db = mysqli_select_db($connection,"lms");
 		$query = "insert into category values('','$_POST[cat_name]')";
 		$query_run = mysqli_query($connection,$query);
+		echo "<script type='text/javascript'>
+	alert('faculty added successfully');
+	window.location.href = 'manage_cat.php';
+</script>";
 	}
 ?>

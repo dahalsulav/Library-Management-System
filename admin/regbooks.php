@@ -8,7 +8,7 @@
 	$category = "";
 	$book_no = "";
 	$price = "";
-	$query = "select books.book_name,books.book_no,books.book_price,authors.author_name from books left join authors on books.author_id = authors.author_id";
+	$query = "select books.book_name,books.book_no,books.book_price,authors.author_name from books left join authors on books.author_name = authors.author_name";
 ?>
 <!DOCTYPE html>
 <html>

@@ -52,10 +52,10 @@
 		</div>
 		<div class="col-md-3">
 			<div class="card bg-light" style="width: 300px">
-				<div class="card-header">Registered Category:</div>
+				<div class="card-header">Registered Faculty:</div>
 				<div class="card-body">
-					<p class="card-text">No. of book's category: <?php echo get_category_count();?></p>
-					<a href="regcat.php" class="btn btn-info">View Categories</a>
+					<p class="card-text">No. of book's faculty: <?php echo get_category_count();?></p>
+					<a href="regcat.php" class="btn btn-info">View faculty</a>
 				</div>
 			</div>
 		</div>

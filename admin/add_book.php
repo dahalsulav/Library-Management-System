@@ -44,9 +44,9 @@
 				</div>
 
 				<div class="form-group">
-					<label>Category Name:</label>
+					<label>Faculty Name:</label>
 					<select class="form-control" name="book_cat"  required="">
-						<option>Select Category </option>
+						<option>Select Faculty </option>
 						<?php
 							$connection = mysqli_connect("localhost","root","");
 							$db = mysqli_select_db($connection,"lms");
@@ -63,12 +63,12 @@
 
 				<div class="form-group">
 					<label>Book No:</label>
-					<input type="text" name="book_no" class="form-control" required="">
+					<input type="number" name="book_no" class="form-control" required="">
 				</div>
 
 				<div class="form-group">
 					<label>Book Price:</label>
-					<input type="text" name="book_price" class="form-control" required="">
+					<input type="number" name="book_price" class="form-control" required="">
 				</div>
 				<button class="btn btn-primary" name="add_book">Add Book</button>
 
@@ -85,5 +85,9 @@
 		$db = mysqli_select_db($connection,"lms");
 		$query = "insert into books values(null,'$_POST[book_name]','$_POST[book_author]','$_POST[book_cat]',$_POST[book_no],$_POST[book_price])";
 		$query_run = mysqli_query($connection,$query);
+		echo "<script type='text/javascript'>
+	alert('book added successfully');
+	window.location.href = 'manage_book.php';
+</script>";
 	}
 ?>

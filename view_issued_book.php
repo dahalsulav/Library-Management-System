@@ -5,7 +5,7 @@
 	$book_name = "";
 	$author = "";
 	$book_no = "";
-	$query = "select book_name,book_author,book_no from issued_books where student_id = $_SESSION[id] and status = 1";
+	$query = "select issue_date, book_name,book_author,book_no from issued_books where student_id = $_SESSION[id] and status = 1";
 ?>
 <?php include('userdashboard_nav.php') ?>
 
@@ -18,6 +18,8 @@
 					<th>Book Name:</th>
 					<th>Book Author:</th>
 					<th>Book Number:</th>
+					<th>Issue Date:</th>
+
 				</tr>
 				<?php
 					$query_run = mysqli_query($connection,$query);
@@ -25,11 +27,15 @@
 						$book_name = $row['book_name'];
 						$author = $row['book_author'];
 						$book_no = $row['book_no'];
+						$issue_date = $row['issue_date'];
+
 				?>
 						<tr>
 							<td><?php echo $book_name;?></td>
 							<td><?php echo $author;?></td>
 							<td><?php echo $book_no;?></td>
+							<td><?php echo $issue_date;?></td>
+
 						</tr>
 						<?php
 					}
