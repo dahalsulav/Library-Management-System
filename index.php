@@ -89,6 +89,7 @@ session_start();
 								$_SESSION['name'] = $row['name'];
 								$_SESSION['email'] = $row['email'];
 								$_SESSION['id'] = $row['id'];
+								// $_SESSION['status'] = 'Active';
 								echo "<script>window.location.href='user_dashboard.php'</script>";
 							} else {
 								echo "<br><br><span class='alert-danger' id='student-login'>Wrong Password</span>";

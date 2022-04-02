@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(!isset($_SESSION['email']))
+{
+    header("location:index.php");
+}
+
 function get_user_issue_book_count()
 {
 	$connection = mysqli_connect("localhost", "root", "");
